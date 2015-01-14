@@ -59,6 +59,7 @@ function partners_load_textdomain() {
 }
 
 add_action( 'plugins_loaded', 'partners_load_textdomain' );
+register_activation_hook(   __FILE__, array( 'PartnersSettings', 'on_activation' ) );
 
 if (is_admin()) {
     $my_settings_page = new PartnersSettings();

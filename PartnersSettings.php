@@ -42,6 +42,18 @@ class PartnersSettings {
         wp_enqueue_script('custom-header');
     }
 
+    public static function on_activation() {
+        if ( ! current_user_can( 'activate_plugins' ) ) return;
+        $plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
+        check_admin_referer( "activate-plugin_{$plugin}" );
+        
+        $options = get_option('partners_option');
+        if (!isset($options['priority'])) {
+            $options['priority'] = 10;
+            update_option('partners_option', $options);
+        }
+    }
+    
     /**
      * Add options page
      */
@@ -69,8 +81,8 @@ class PartnersSettings {
 
                 // Process and save the image id
                 $imageId = absint($_REQUEST['file']);
-                if (!is_array($this->options['images']) || !in_array($imageId, $this->options['images'])) {
-                    if ($this->options['images'] == NULL) {
+                if (!isset($this->options['images']) || !in_array($imageId, $this->options['images'])) {
+                    if (!isset($this->options['images']) || $this->options['images'] == NULL) {
                         $this->options['images'] = array($imageId);
                     } else
                         array_push($this->options['images'], $imageId);
@@ -184,7 +196,7 @@ class PartnersSettings {
     }
 
     public function images_callback() {
-        if ($this->options['images']) {
+        if (isset($this->options['images'])) {
             echo "<ul>";
 
             foreach ($this->options['images'] as $key => $value) {
