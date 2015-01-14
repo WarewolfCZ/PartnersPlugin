@@ -4,7 +4,7 @@
   Plugin Name: Partners
   Plugin URI: https://github.com/WarewolfCZ/PartnersPlugin/
   Description: Partners plugin adds option to select one of the predefined images with link and add it to the post
-  Version: 1.0.0
+  Version: 1.0.1
   Author: WarewolfCZ
   Author URI: http://www.warewolf.cz
   License: GPLv2
@@ -31,7 +31,6 @@
  */
 defined('ABSPATH') or die("No script kiddies please!");
 
-load_plugin_textdomain('partners', false, basename(dirname(__FILE__)) . '/languages/');
 
 require_once 'PartnersSettings.php';
 require_once 'EditPost.php';
@@ -55,9 +54,14 @@ function appendPartner($content) {
     return $content;
 }
 
+function partners_load_textdomain() {
+    load_plugin_textdomain( 'partners', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
+}
+
+add_action( 'plugins_loaded', 'partners_load_textdomain' );
+
 if (is_admin()) {
     $my_settings_page = new PartnersSettings();
-
     add_action('load-post.php', 'addMetabox');
     add_action('load-post-new.php', 'addMetabox');
 } else {

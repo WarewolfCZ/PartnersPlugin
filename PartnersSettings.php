@@ -24,7 +24,6 @@
  */
 class PartnersSettings {
 
-    //TODO: add localization
     /**
      * Holds the values to be used in the fields callbacks
      */
@@ -48,7 +47,7 @@ class PartnersSettings {
      */
     public function add_plugin_page() {
         $page_hook_suffix = add_posts_page
-                ('Partners', 'Manage Partners', 'manage_options', 'partners-manage', array($this, 'partners_options'));
+                ('Partners', __('Manage Partners', 'partners'), 'manage_options', 'partners-manage', array($this, 'partners_options'));
 
         add_action('admin_print_scripts-' . $page_hook_suffix, array($this, 'partners_scripts'));
     }
@@ -120,14 +119,14 @@ class PartnersSettings {
 
         add_settings_section(
                 'partners_setting_section', // ID
-                'Partners management page', // Title
+                __('Partners management page', 'partners'), // Title
                 array($this, 'print_section_info'), // Callback
                 'partners-manage' // Page
         );
 
         add_settings_field(
                 'images', // ID
-                'Partners', // Title 
+                _x('Partners', 'list of partners', 'partners'), // Title 
                 array($this, 'images_callback'), // Callback
                 'partners-manage', // Page
                 'partners_setting_section' // Section           
@@ -135,7 +134,7 @@ class PartnersSettings {
 
         add_settings_field(
                 'priority', // ID
-                'Link priority', // Title 
+                __('Link priority', 'partners'), // Title 
                 array($this, 'priority_callback'), // Callback
                 'partners-manage', // Page
                 'partners_setting_section' // Section           
@@ -169,7 +168,6 @@ class PartnersSettings {
      * Print the Section text
      */
     public function print_section_info() {
-
         $modal_update_href = esc_url(add_query_arg(array(
             'page' => 'partners-manage',
             '_wpnonce' => wp_create_nonce('partners_option'),

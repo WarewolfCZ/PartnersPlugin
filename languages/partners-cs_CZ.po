@@ -1,0 +1,111 @@
+# Copyright (C) 2015 Partners
+# This file is distributed under the same license as the Partners package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Partners 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/PartnersPlugin\n"
+"POT-Creation-Date: 2015-01-14 21:27:34+00:00\n"
+"PO-Revision-Date: 2015-01-14 22:28+0100\n"
+"Last-Translator: WarewolfCZ\n"
+"Language-Team: \n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: EditPost.php:41
+msgid "Select partner"
+msgstr "Výběr partnera"
+
+#: EditPost.php:55
+msgid "Fill in the URL"
+msgstr "Vyplňte adresu odkazu"
+
+#: EditPost.php:57
+msgid "Select partner image"
+msgstr "Vyberte obrázek"
+
+#: EditPost.php:61
+msgid "-None-"
+msgstr "-Žádný-"
+
+#: PartnersSettings.php:50
+msgid "Manage Partners"
+msgstr "Správa partnerů"
+
+#: PartnersSettings.php:79
+msgid "Image added"
+msgstr "Obrázek byl přidán"
+
+#: PartnersSettings.php:92
+msgid "Image deleted"
+msgstr "Obrázek byl odebrán"
+
+#: PartnersSettings.php:95
+msgid "Settings updated"
+msgstr "Nastavení bylo uloženo"
+
+#: PartnersSettings.php:122
+msgid "Partners management page"
+msgstr "Správa partnerů"
+
+#: PartnersSettings.php:129
+msgctxt "list of partners"
+msgid "Partners"
+msgstr "Seznam partnerů"
+
+#: PartnersSettings.php:137
+msgid "Link priority"
+msgstr "Priorita"
+
+#: PartnersSettings.php:179
+msgid "Choose an image"
+msgstr "Vyberte obrázek"
+
+#: PartnersSettings.php:180
+msgid "Add image"
+msgstr "Přidat obrázek"
+
+#: PartnersSettings.php:180
+msgid "Add new image"
+msgstr "Přidat nový obrázek"
+
+#: PartnersSettings.php:198
+msgid "Title"
+msgstr "Název"
+
+#: PartnersSettings.php:199
+msgid "Delete"
+msgstr "Smazat"
+
+#: PartnersSettings.php:207
+msgid "Priority (default value: 10)"
+msgstr "Priorita (výchozí hodnota: 10)"
+
+#. Plugin Name of the plugin/theme
+msgid "Partners"
+msgstr "Partners"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/WarewolfCZ/PartnersPlugin/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Partners plugin adds option to select one of the predefined images with link "
+"and add it to the post"
+msgstr "Plugin Partners umožňuje přidat obrázkový odkaz na konec příspěvků"
+
+#. Author of the plugin/theme
+msgid "WarewolfCZ"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.warewolf.cz"
+msgstr ""
+
+#~ msgctxt "plugin name"
+#~ msgid "Partners"
+#~ msgstr "Partners"

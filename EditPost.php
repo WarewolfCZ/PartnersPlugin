@@ -58,7 +58,7 @@ class EditPost {
         echo '<div>';
         echo '<select id="partner_selected" name="partner_selected">';
         echo '<option value="" ' . (!$partner_selected ? 'selected="selected"' : '') . '>' .
-                __('None', 'partners') . '</option>';
+                __('-None-', 'partners') . '</option>';
         foreach ($this->options['images'] as $key => $value) {
             echo '<option value="' . esc_attr($value) . '" ' 
                     . ($partner_selected == $value ? 'selected="selected"' : '') . '>' 

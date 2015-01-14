@@ -1,4 +1,4 @@
-=== MinecraftServerStatus ===
+=== Partners ===
 Contributors: WarewolfCZ
 Donate link: 
 Tags: links
@@ -28,4 +28,6 @@ Partners plugin adds option to insert one of the predefined images to the end of
 
 = 1.0 =
 * First release
+= 1.0.1 =
+* Czech translation
 
