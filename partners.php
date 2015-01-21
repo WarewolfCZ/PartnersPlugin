@@ -4,7 +4,7 @@
   Plugin Name: Partners
   Plugin URI: https://github.com/WarewolfCZ/PartnersPlugin/
   Description: Partners plugin adds option to select one of the predefined images with link and add it to the post
-  Version: 1.0.1
+  Version: 1.0.2
   Author: WarewolfCZ
   Author URI: http://www.warewolf.cz
   License: GPLv2
