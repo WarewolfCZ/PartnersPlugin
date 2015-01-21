@@ -30,4 +30,7 @@ Partners plugin adds option to insert one of the predefined images to the end of
 * First release
 = 1.0.1 =
 * Czech translation
+= 1.0.2 =
+* Fixed input field overflow
+* Partners are now sorted alphabeticaly
 

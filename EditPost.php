@@ -53,9 +53,8 @@ class EditPost {
         $partner_link = get_post_meta($post->ID, '_partners_meta_link', true);
 
         echo '<label for="partner_link">' . __('Fill in the URL', 'partners') . '</label> ';
-        echo '<input type="text" id="partner_link" name="partner_link" value="' . esc_attr($partner_link) . '" size="95" />';
+        echo '<input type="text" id="partner_link" name="partner_link" value="' . esc_attr($partner_link) . '" style="width: 900px; max-width: 100%;" />';
         echo '<label for="partner_selected"><div>' . __('Select partner image', 'partners') . '</div></label>';
-        echo '<div>';
         echo '<select id="partner_selected" name="partner_selected">';
         echo '<option value="" ' . (!$partner_selected ? 'selected="selected"' : '') . '>' .
                 __('-None-', 'partners') . '</option>';
