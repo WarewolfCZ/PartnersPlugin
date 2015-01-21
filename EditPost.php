@@ -52,16 +52,25 @@ class EditPost {
         $partner_selected = get_post_meta($post->ID, '_partners_meta_selected', true);
         $partner_link = get_post_meta($post->ID, '_partners_meta_link', true);
 
+        
+        $selectValues = array();
+        // fetch partner names
+        foreach ($this->options['images'] as $key => $value) {
+            $selectValues[get_the_title($value)] = $value;
+        }
+        // sort partners by name
+        ksort($selectValues);
+        
         echo '<label for="partner_link">' . __('Fill in the URL', 'partners') . '</label> ';
         echo '<input type="text" id="partner_link" name="partner_link" value="' . esc_attr($partner_link) . '" style="width: 900px; max-width: 100%;" />';
         echo '<label for="partner_selected"><div>' . __('Select partner image', 'partners') . '</div></label>';
         echo '<select id="partner_selected" name="partner_selected">';
         echo '<option value="" ' . (!$partner_selected ? 'selected="selected"' : '') . '>' .
                 __('-None-', 'partners') . '</option>';
-        foreach ($this->options['images'] as $key => $value) {
+        foreach ($selectValues as $key => $value) {
             echo '<option value="' . esc_attr($value) . '" ' 
                     . ($partner_selected == $value ? 'selected="selected"' : '') . '>' 
-                    . get_the_title($value) . '</option>';
+                    . $key . '</option>';
         }
         echo "</select>";
     }
